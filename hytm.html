@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Профиль | Mini App</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00ff66;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background-color: #111;
+      border: 2px solid #00ff66;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 0 20px #00ff66aa;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 5px #00ff66;
+    }
+
+    .stat {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      text-shadow: 0 0 3px #00ff66;
+    }
+
+    .ref-link {
+      background: #000;
+      border: 1px dashed #00ff66;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      word-wrap: break-word;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: #00ff66;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #00ff66aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>👾 Добро пожаловать, агент {{ user_id }}</h1>
+
+    <div class="stat">🪙 Баланс: <strong>{{ coins }}</strong> коинов</div>
+    <div class="stat">👥 Приглашено: <strong>{{ referrals }}</strong></div>
+
+    <div class="ref-link">
+      Ваша реф-ссылка: <br>
+      <a href="https://t.me/ВАШ_БОТ?start={{ user_id }}" target="_blank">
+        https://t.me/ВАШ_БОТ?start={{ user_id }}
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    🧬 Made by Mr_Seed_1
+  </div>
+</body>
+</html>
